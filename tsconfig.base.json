@@ -1,0 +1,10 @@
+{
+    "$schema": "https://raw.githubusercontent.com/TypeScriptToLua/TypeScriptToLua/master/tsconfig-schema.json",
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "strict": true,
+        "sourceMap": true,
+        "noUncheckedIndexedAccess": true,
+        "declaration": true
+    }
+}

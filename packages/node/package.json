@@ -1,0 +1,18 @@
+{
+    "name": "@keyslam/node",
+    "scripts": {
+        "build": "tstl",
+        "watch": "tstl --watch"
+    },
+    "devDependencies": {
+        "love-typescript-definitions": "11.5.1",
+        "lua-types": "2.13.1",
+        "typescript-to-lua": "1.32.0"
+    },
+    "files": [
+        "dist/**/*.lua",
+        "dist/**/*.d.ts"
+    ],
+    "types": "./dist/index.d.ts",
+    "main": "./dist/index"
+}

@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run",
+            "type": "lua-local",
+            "request": "launch",
+            "program": {
+                "command": "lovec"
+            },
+            "args": ["build"],
+            "scriptRoots": ["build"],
+            "ignorePatterns": ["lualib_bundle"],
+            "scriptFiles": ["**/*.lua"],
+            "preLaunchTask": "build"
+        },
+        {
+            "name": "Debug",
+            "type": "lua-local",
+            "request": "launch",
+            "program": {
+                "command": "lovec"
+            },
+            "args": ["build", "debug"],
+            "scriptRoots": ["build"],
+            "ignorePatterns": ["lualib_bundle"],
+            "scriptFiles": ["**/*.lua"],
+            "preLaunchTask": "build"
+        }
+    ]
+}

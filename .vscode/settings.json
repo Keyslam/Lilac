@@ -1,0 +1,22 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    "files.autoSave": "onFocusChange",
+
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "always",
+        "source.addMissingImports": "always",
+        "source.fixAll": "always",
+        "source.fixAll.eslint": "always"
+    },
+
+    "editor.detectIndentation": false,
+
+    "search.exclude": {
+        "**/node_modules": true,
+        "dist": true
+    },
+
+    "typescript.tsdk": "./node_modules/typescript/lib"
+}
