@@ -18,5 +18,23 @@
         "dist": true
     },
 
+    "files.exclude": {
+        "**/.git": true,
+        "**/dist": true,
+        "**/out": true,
+        "**/node_modules": true
+    },
+
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.lua": "${capture}.lua.map, ${capture}.d.ts",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "*.ts": "${capture}.spec.ts",
+        "package.json": "tsconfig.json, tsconfig.*.json, LICENSE, pnpm-lock.yaml, pnpm-workspace.yaml, .editorconfig, .gitattributes, .gitignore, .prettierrc, .prettierignore, .eslintrc.json, eslint.config.mjs"
+    },
+
     "typescript.tsdk": "./node_modules/typescript/lib"
 }

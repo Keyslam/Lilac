@@ -1,0 +1,7 @@
+{
+    "extends": "../../tsconfig.lua.json",
+    "compilerOptions": {
+        "rootDir": "src",
+        "outDir": "dist"
+    }
+}

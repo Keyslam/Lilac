@@ -2,11 +2,11 @@
     "name": "lilac",
     "private": true,
     "license": "MIT",
-    "packageManager": "pnpm@10.18.1",
+    "packageManager": "pnpm@10.25.0",
     "scripts": {
         "build": "pnpm -r run build",
         "watch": "pnpm -r --parallel run watch",
-        "lint": "eslint . --max-warnings 0",
+        "lint": "eslint ./packages/**/*.ts --max-warnings 0",
         "format": "prettier --write .",
         "prepare": "husky"
     },
@@ -18,13 +18,13 @@
         "eslint-plugin-no-null": "1.0.2",
         "eslint-plugin-prettier": "5.5.4",
         "husky": "9.1.7",
-        "lint-staged": "^16.2.3",
+        "lint-staged": "16.2.3",
         "prettier": "3.6.2",
         "typescript": "5.8.2",
         "typescript-eslint": "8.46.0"
     },
     "lint-staged": {
-        "*.ts": [
+        "packages/**/*.ts": [
             "prettier --write",
             "eslint --fix --max-warnings 0"
         ],

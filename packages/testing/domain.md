@@ -1,0 +1,32 @@
+- **TestSuite**
+    - A specialized **CompositeTest** that represents the top-level grouping of tests, typically a single file or module.
+    - May have additional metadata (e.g., file path, setup/teardown hooks).
+    - Contains one or more **Tests** (CompositeTests or LeafTests).
+- **Tests** (abstract concept)
+    - **CompositeTest** (e.g., `describe`)
+        - Has a **name**.
+        - Contains child **Tests** (CompositeTests or LeafTests).
+        - Does **not** have a **TestBody**.
+    - **LeafTest** (e.g., `it`)
+        - Has a **name**.
+        - Contains a **TestBody**.
+        - Does **not** have children.
+- **TestBody**
+    - Defines the code to execute for a leaf test.
+    - Contains one or more **Expectations**, each of which checks a specific condition.
+- **TestRun**
+    - Represents the execution of a **Test** at a specific time.
+    - Tracks **state**: `Queued` → `Running` → `Completed`.
+    - Produces a **TestResult** on completion:
+        - **Leaf TestResult** reflects the outcome of its `TestBody`.
+        - **Composite TestResult** aggregates results of all children:
+            - `Passed` if all children passed.
+            - `Failed` if any child failed.
+            - `Skipped` if the test or all children were skipped.
+        - May include **sub-results** corresponding to child TestRuns.
+- **TestResult**
+    - Indicates the outcome of a test run: `Passed`, `Failed`, or `Skipped`.
+    - May have **sub-results** for composite tests.
+    - Can be **reported** using different strategies:
+        - **Batch reporting**: all results collected and printed or sent after the run.
+        - **Live reporting**: results streamed as individual tests change state (`Queued` → `Running` → `Completed`).

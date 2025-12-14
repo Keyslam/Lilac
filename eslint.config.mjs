@@ -2,15 +2,19 @@ import tsPlugin from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import { defineConfig } from 'eslint/config';
+import fs from 'fs';
+
+const prettierConfig = JSON.parse(fs.readFileSync('./.prettierrc', 'utf8'));
 
 export default defineConfig([
     eslintPluginPrettierRecommended,
     {
         files: ['packages/**/*.ts'],
+        ignores: ['**/out/**', '**/dist/**'],
         languageOptions: {
             parser: tsParser,
             parserOptions: {
-                project: ['./tsconfig.base.json', './packages/*/tsconfig.json'],
+                project: ['./tsconfig.json', './packages/*/tsconfig.json'],
                 tsconfigRootDir: process.cwd(),
                 sourceType: 'module',
             },
@@ -50,6 +54,8 @@ export default defineConfig([
             semi: ['error', 'always'],
             quotes: ['error', 'single'],
             curly: 'error',
+
+            'prettier/prettier': ['error', prettierConfig],
         },
     },
 ]);

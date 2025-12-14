@@ -1,0 +1,9 @@
+{
+    "name": "@keyslam/json",
+    "files": [
+        "dist/**/*.lua",
+        "dist/**/*.d.ts"
+    ],
+    "types": "./dist/index.d.ts",
+    "main": "./dist/index"
+}

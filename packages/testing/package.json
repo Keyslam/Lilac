@@ -1,5 +1,5 @@
 {
-    "name": "@keyslam/node",
+    "name": "@keyslam/testing",
     "scripts": {
         "build": "tstl",
         "watch": "tstl --watch"
@@ -9,10 +9,14 @@
         "lua-types": "2.13.1",
         "typescript-to-lua": "1.32.0"
     },
+    "dependencies": {
+        "@keyslam/json": "file:../json"
+    },
     "files": [
         "dist/**/*.lua",
         "dist/**/*.d.ts"
     ],
     "types": "./dist/index.d.ts",
-    "main": "./dist/index"
+    "main": "./dist/index",
+    "sideEffects": true
 }
