@@ -5,9 +5,9 @@
         "watch": "tstl --watch"
     },
     "devDependencies": {
-        "love-typescript-definitions": "11.5.1",
+        "love-typescript-definitions": "11.5.2",
         "lua-types": "2.13.1",
-        "typescript-to-lua": "1.32.0"
+        "typescript-to-lua": "1.33.0"
     },
     "dependencies": {
         "@keyslam/json": "file:../json"
