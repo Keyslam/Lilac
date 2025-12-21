@@ -2,7 +2,7 @@
     "name": "lilac",
     "private": true,
     "license": "MIT",
-    "packageManager": "pnpm@10.25.0",
+    "packageManager": "pnpm@10.26.0",
     "scripts": {
         "build": "pnpm -r run build",
         "watch": "pnpm -r --parallel run watch",

@@ -98,8 +98,6 @@ export class TestRunner {
     }
 
     private matches(test: Test, matcher: TestMatcher): boolean {
-        print('checking for match for test: ' + test.getId(), matcher(test));
-
         return matcher(test);
     }
 }
@@ -121,7 +119,6 @@ function createTestIdMatcher(targetIds: string[]): TestMatcher {
         let prefix = '';
         for (let i = 0; i < parts.length; i++) {
             prefix = i === 0 ? parts[0]! : `${prefix}::${parts[i]}`;
-            print('adding valid id prefix: ' + prefix);
             validIds.add(prefix);
         }
     }

@@ -1,0 +1,10 @@
+{
+    "extends": "../../tsconfig.lua.json",
+    "compilerOptions": {
+        "rootDir": "src",
+        "outDir": "dist"
+    },
+    "tstl": {
+        "luaPlugins": [{ "name": "../../plugins/testing" }]
+    }
+}

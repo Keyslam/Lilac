@@ -116,8 +116,6 @@ export class PipePort implements Port {
         const rawMessage = this.leftover.slice(0, index);
         this.leftover = this.leftover.slice(index + 1); // save remainder
 
-        print('received raw message:', rawMessage);
-
         return json.decode(rawMessage) as IncomingMessage;
     }
 
