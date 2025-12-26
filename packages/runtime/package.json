@@ -1,0 +1,21 @@
+{
+    "name": "@keyslam/runtime",
+    "scripts": {
+        "build": "tstl",
+        "watch": "tstl --watch"
+    },
+    "devDependencies": {
+        "love-typescript-definitions": "11.5.2",
+        "lua-types": "2.13.1",
+        "typescript-to-lua": "1.33.0"
+    },
+    "dependencies": {
+        "@keyslam/testing": "file:../testing"
+    },
+    "files": [
+        "dist/**/*.lua",
+        "dist/**/*.d.ts"
+    ],
+    "types": "./dist/index.d.ts",
+    "main": "./dist/index"
+}

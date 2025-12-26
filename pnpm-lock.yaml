@@ -60,11 +60,11 @@ importers:
         specifier: 1.33.0
         version: 1.33.0(typescript@5.9.3)
 
-  packages/node-test:
+  packages/runtime:
     dependencies:
-      '@keyslam/node':
-        specifier: file:../node
-        version: link:../node
+      '@keyslam/testing':
+        specifier: file:../testing
+        version: link:../testing
     devDependencies:
       love-typescript-definitions:
         specifier: 11.5.2
